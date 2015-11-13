@@ -5,7 +5,7 @@ int sensorLed = 0;
 
 int currentBit = 0;
 
-int interval = 50;
+int interval = 100;
 
 void setup() {                
   Serial.begin(9600);
