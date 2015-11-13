@@ -5,7 +5,6 @@ int sensorLed = 0;
 
 int currentBit = 0;
 
-//int interval = 50;
 int interval = 60; // Any smaller than this and the transmission seems to fail. The pull down resistor attached to the photoresistor may need to be reduced to allow the voltage to drop more quickly.
 
 int currentReadPosition = 7; // 8 bit zero based position, starting at the end (ie. 7) and decrementing.
@@ -118,7 +117,7 @@ void decrementPosition()
   
   if (currentReadPosition < 0)
   {
-    Serial.print("Character read:");
+    Serial.print("Reading char:");
     Serial.println(char(incomingByte));
     
     currentReadPosition = 7;
